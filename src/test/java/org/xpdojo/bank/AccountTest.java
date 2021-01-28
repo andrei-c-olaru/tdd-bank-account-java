@@ -11,22 +11,22 @@ public class AccountTest {
     @Test
     public void createAccountWithAppropriateBalance(){
         Account account = new Account();
-        assertEquals(account.getBalance(), 0);
+        assertEquals(account.getBalance().getAmount(), 0);
     }
 
     @Test
     public void depositAnAmount(){
         Account account = new Account();
-        account.deposit(100);
-        assertThat(account.getBalance()).isEqualTo(100);
+        account.deposit(new Money(100));
+        assertThat(account.getBalance().getAmount()).isEqualTo(100);
     }
 
     @Test
     public void depositMultipleAmount(){
         Account account = new Account();
-        account.deposit(100);
-        account.deposit(100);
-        assertThat(account.getBalance()).isEqualTo(200);
+        account.deposit(new Money(100));
+        account.deposit(new Money(100));
+        assertThat(account.getBalance().getAmount()).isEqualTo(200);
     }
 
 

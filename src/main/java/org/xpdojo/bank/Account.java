@@ -2,13 +2,13 @@ package org.xpdojo.bank;
 
 public class Account {
 
-    private int balance = 0;
+    private Money balance = new Money();
 
-    public int getBalance() {
+    public Money getBalance() {
         return balance;
     }
 
-    public void deposit(int i) {
-        balance += i;
+    public void deposit(Money money) {
+        this.balance.add(money);
     }
 }

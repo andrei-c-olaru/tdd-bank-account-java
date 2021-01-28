@@ -19,4 +19,8 @@ public final class Money {
     public int getAmount() {
         return amount;
     }
+
+    public void add(Money money) {
+        this.amount += money.getAmount();
+    }
 }
