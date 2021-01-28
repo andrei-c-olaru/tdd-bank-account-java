@@ -29,5 +29,13 @@ public class AccountTest {
         assertThat(account.getBalance().getAmount()).isEqualTo(200);
     }
 
+    @Test
+    public void withdrawAmount(){
+        Account account = new Account();
+        account.deposit(new Money(100));
+        account.withdraw(new Money(50));
+        assertThat(account.getBalance().getAmount()).isEqualTo(50);
+    }
+
 
 }

@@ -11,4 +11,10 @@ public class Account {
     public void deposit(Money money) {
         this.balance.add(money);
     }
+
+    public void withdraw(Money money) {
+        if (balance.getAmount() >= money.getAmount()) {
+            this.balance.subtract(money);
+        }
+    }
 }

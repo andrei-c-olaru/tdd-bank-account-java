@@ -16,4 +16,8 @@ class MoneyTest {
         Money money = new Money(100);
         assertEquals(money.getAmount(), 100);
     }
+
+
+
+
 }

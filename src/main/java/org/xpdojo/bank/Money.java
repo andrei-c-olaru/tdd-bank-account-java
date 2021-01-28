@@ -23,4 +23,8 @@ public final class Money {
     public void add(Money money) {
         this.amount += money.getAmount();
     }
+
+    public void subtract(Money money){
+        this.amount -= money.getAmount();
+    }
 }
